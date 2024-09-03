@@ -1,0 +1,6 @@
+- hour: 9
+  minute: 0
+  mode: Light
+- hour: 23
+  minute: 0
+  mode: Night

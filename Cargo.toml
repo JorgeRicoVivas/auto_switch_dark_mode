@@ -1,0 +1,29 @@
+[package]
+name = "auto_switch_dark_mode"
+version = "0.1.0"
+edition = "2021"
+
+[dependencies]
+windows-registry = "0.2.0"
+
+serde = { version = "1.0.208", features = ["derive"] }
+serde_yaml = "0.9.34"
+chrono = "0.4.38"
+itertools = "0.13.0"
+
+[profile.dev]
+incremental = true
+panic = "abort"
+debug = 0
+opt-level = 3
+lto = false
+codegen-units = 256
+
+[profile.release]
+incremental = false
+panic = "abort"
+debug = false
+opt-level = 3
+lto = true
+codegen-units = 1
+strip = "debuginfo"
